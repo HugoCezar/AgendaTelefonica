@@ -1,0 +1,22 @@
+﻿@model Agenda_Telefonica.Models.Contato
+
+@{
+    ViewData["Title"] = "Agenda";
+}
+
+<h2>Agenda Telefônica</h2>
+<hr />
+<form asp-controller="Home" asp-action="Agenda" method="post">    
+    <label asp-for="Nome">Nome</label><input asp-for="Nome" /><br />   
+    <label asp-for="Apelido">Apelido</label><input asp-for="Apelido" /><br /><br />    
+    <label>Telefones</label><br />   
+    <label asp-for="Tel_res">Residencial</label><input asp-for="Tel_res" /><br />    
+    <label asp-for="Tel_cel">Celular</label><input asp-for="Tel_cel" /><br />    
+    <label asp-for="Tel_coml">Comercial</label><input asp-for="Tel_coml" /><br />    
+    <button type="submit">Cadastrar</button>
+</form>
+<br /><br />
+<div>
+    <a asp-controller="Home" asp-action="ListaContatos">Lista de contatos</a>    
+</div>
+
